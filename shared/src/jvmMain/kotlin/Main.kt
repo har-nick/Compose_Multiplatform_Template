@@ -7,7 +7,7 @@ import uk.co.harnick.composemptemplate.core.App
 fun main() = application {
     Window(
         onCloseRequest = ::exitApplication,
-        title = "Bulwark",
+        title = "Compose MP Template",
         state = rememberWindowState(width = 1400.dp, height = 800.dp)
     ) {
         App()
