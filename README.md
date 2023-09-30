@@ -1,6 +1,10 @@
 # Compose Multiplatform Template
 ### A Compose Multiplatform Template for Android, Linux, and Windows build-targets.
 
+|    ![image](https://github.com/har-nick/Compose_Multiplatform_Template/assets/56137506/5459f9be-df87-4904-afef-8512f78f350b)     |         ![Screenshot_20231001-001057](https://github.com/har-nick/Compose_Multiplatform_Template/assets/56137506/459330ef-313f-4e80-bd6f-1e0dc5b65a8f)          |          ![Screenshot_20231001-001103](https://github.com/har-nick/Compose_Multiplatform_Template/assets/56137506/3b4bbed3-311e-47aa-917e-6b17bd94ff5b)          |
+|:-------:|:-----------------:|:------------------:|
+| Desktop | Mobile (Portrait) | Mobile (Landscape) |
+
 ### Features:
 - 📦 Preconfigured dependencies with [Gradle Version Catalogs](https://docs.gradle.org/current/userguide/platforms.html)
 - 🗃️ Structured with Clean Architecture
