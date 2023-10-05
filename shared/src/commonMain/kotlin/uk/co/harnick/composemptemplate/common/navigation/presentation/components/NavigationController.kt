@@ -9,7 +9,7 @@ import uk.co.harnick.composemptemplate.features.example.domain.ExampleScreenPara
 @Composable
 fun NavigationController() {
     Navigator(screen = Screen1.screenProvider(ExampleScreenParams())) { navigator ->
-        NavigationComponent() {
+        NavigationComponent {
             FadeTransition(navigator) { screen -> screen.Content() }
         }
     }
