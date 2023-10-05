@@ -4,6 +4,6 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 
 @Composable
-actual fun exampleTheme(content: @Composable () -> Unit) {
+actual fun ExampleTheme(content: @Composable () -> Unit) {
     MaterialTheme { content() }
 }

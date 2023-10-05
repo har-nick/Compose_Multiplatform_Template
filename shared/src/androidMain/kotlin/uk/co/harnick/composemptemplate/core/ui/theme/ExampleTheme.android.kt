@@ -9,7 +9,7 @@ import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
 
 @Composable
-actual fun exampleTheme(content: @Composable () -> Unit) {
+actual fun ExampleTheme(content: @Composable () -> Unit) {
     val view = LocalView.current
     val window = (view.context as Activity).window
 
