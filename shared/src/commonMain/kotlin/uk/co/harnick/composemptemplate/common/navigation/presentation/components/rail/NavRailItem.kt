@@ -8,6 +8,8 @@ import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.input.pointer.PointerIcon
+import androidx.compose.ui.input.pointer.pointerHoverIcon
 import cafe.adriel.voyager.core.screen.Screen
 import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.currentOrThrow
@@ -27,7 +29,7 @@ fun <T : Screen, S : ScreenParams> Screens<T, S>.toNavRailItem(
     NavigationRailItem(
         selected = isSelected,
         onClick = { navigator.replaceAll(screenProvider(params)) },
-        modifier = modifier,
+        modifier = modifier.then(Modifier.pointerHoverIcon(PointerIcon.Hand)),
         icon = { Icon(imageVector = imageVector, contentDescription = null) },
         label = { Text(label) },
         alwaysShowLabel = false
