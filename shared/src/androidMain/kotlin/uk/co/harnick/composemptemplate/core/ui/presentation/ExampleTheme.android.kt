@@ -1,4 +1,4 @@
-package uk.co.harnick.composemptemplate.core.ui.theme
+package uk.co.harnick.composemptemplate.core.ui.presentation
 
 import android.app.Activity
 import android.graphics.Color
@@ -17,7 +17,7 @@ actual fun ExampleTheme(content: @Composable () -> Unit) {
     window.navigationBarColor = Color.TRANSPARENT
 
     WindowCompat.setDecorFitsSystemWindows(window, false)
-    WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars = isSystemInDarkTheme()
+    WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars = !isSystemInDarkTheme()
 
     MaterialTheme { content() }
 }

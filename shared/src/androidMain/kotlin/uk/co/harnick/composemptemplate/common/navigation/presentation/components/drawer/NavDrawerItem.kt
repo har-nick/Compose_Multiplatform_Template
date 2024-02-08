@@ -14,7 +14,7 @@ import uk.co.harnick.composemptemplate.common.navigation.domain.ScreenParams
 import uk.co.harnick.composemptemplate.common.navigation.domain.Screens
 
 @Composable
-fun <T : Screen, S : ScreenParams> Screens<T, S>.toNavDrawerItem(params: S) {
+fun <T : Screen, S : ScreenParams> Screens<T, S>.ToNavDrawerItem(params: S) {
     val navigator = LocalNavigator.currentOrThrow
 
     val isSelected = label == navigator.lastItem.key

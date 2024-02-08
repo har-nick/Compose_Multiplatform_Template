@@ -1,4 +1,4 @@
-package uk.co.harnick.composemptemplate.android
+package uk.co.harnick.composemptemplate
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity

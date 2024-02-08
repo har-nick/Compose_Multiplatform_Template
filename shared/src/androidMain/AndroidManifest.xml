@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application
+        android:label="ComeposeMPTemplate"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
@@ -13,4 +14,4 @@
             </intent-filter>
         </activity>
     </application>
-</manifest> 
+</manifest>

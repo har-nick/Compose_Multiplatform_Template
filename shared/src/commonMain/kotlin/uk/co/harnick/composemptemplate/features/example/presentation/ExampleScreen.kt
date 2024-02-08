@@ -7,9 +7,12 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import cafe.adriel.voyager.core.model.rememberScreenModel
 import cafe.adriel.voyager.core.screen.Screen
 import cafe.adriel.voyager.core.screen.ScreenKey
 import uk.co.harnick.composemptemplate.features.example.domain.ExampleScreenParams
@@ -20,6 +23,9 @@ data class ExampleScreen(
 ) : Screen {
     @Composable
     override fun Content() {
+        val exampleVM = rememberScreenModel { ExampleViewModel() }
+        val state by exampleVM.state.collectAsState()
+
         Scaffold { scaffoldPadding ->
             Column(
                 Modifier

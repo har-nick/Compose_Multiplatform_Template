@@ -1,44 +1,62 @@
 [versions]
-activity-compose = "1.7.2"
-agp = "8.1.2"
-compose-multiplatform = "1.5.2"
-coroutines = "1.7.3"
-kotlin = "1.9.10"
-sqldelight = "2.0.0"
-voyager = "1.0.0-rc07"
+android-sdk-min = "24"
+android-sdk-compile = "34"
+agp = "8.2.2"
+compose = "1.6.0-beta01"
+compose-compiler-android = "1.5.9"
+compose-compiler-jetbrains = "1.5.8"
+coroutines = "1.8.0-RC2"
+i18n4k = "0.7.0"
+jdk = "21"
+kotlin = "1.9.22"
+sqldelight = "2.0.1"
+voyager = "1.0.0"
 
 [libraries]
-androidx-compose-activity = { module = "androidx.activity:activity-compose", version.ref = "activity-compose" }
+# Android
+androidx-compose-activity = { module = "androidx.activity:activity-compose", version = "1.8.2" }
 androidx-core-ktx = { module = "androidx.core:core", version = "1.12.0" }
-androidx-lifecycle-runtime = { module = "androidx.lifecycle:lifecycle-runtime-compose", version = "2.6.2" }
 
-compose-animations = { module = "org.jetbrains.compose.animation:animation", version.ref = "compose-multiplatform" }
-compose-components-resources = { module = "org.jetbrains.compose.components:components-resources", version.ref = "compose-multiplatform" }
-compose-foundation = { module = "org.jetbrains.compose.foundation:foundation", version.ref = "compose-multiplatform" }
-compose-material = { module = "org.jetbrains.compose.material:material", version.ref = "compose-multiplatform" }
-compose-material3 = { module = "org.jetbrains.compose.material3:material3", version.ref = "compose-multiplatform" }
-compose-resources = { module = "org.jetbrains.compose.components:components-resources", version.ref = "compose-multiplatform" }
-compose-runtime = { module = "org.jetbrains.compose.runtime:runtime", version.ref = "compose-multiplatform" }
+# Compose
+compose-animations = { module = "org.jetbrains.compose.animation:animation", version.ref = "compose" }
+compose-components-resources = { module = "org.jetbrains.compose.components:components-resources", version.ref = "compose" }
+compose-foundation = { module = "org.jetbrains.compose.foundation:foundation", version.ref = "compose" }
+compose-material = { module = "org.jetbrains.compose.material:material", version.ref = "compose" }
+compose-material3 = { module = "org.jetbrains.compose.material3:material3", version.ref = "compose" }
+compose-resources = { module = "org.jetbrains.compose.components:components-resources", version.ref = "compose" }
+compose-runtime = { module = "org.jetbrains.compose.runtime:runtime", version.ref = "compose" }
 
+# i18n4k
+i18n4k-core = { module = "de.comahe.i18n4k:i18n4k-core", version.ref = "i18n4k" }
+i18n4k-jvm = { module = "de.comahe.i18n4k:i18n4k-core-jvm", version.ref = "i18n4k" }
+
+# Coroutines
 coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutines" }
 coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
 coroutines-jvm = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm", version.ref = "coroutines" }
 coroutines-swing = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-swing", version.ref = "coroutines" }
 
+# Kamel
+kamel = { module = "media.kamel:kamel-image", version = "0.9.1" }
+
+# SQLDelight
 sqldelight-driver-android = { module = "app.cash.sqldelight:android-driver", version.ref = "sqldelight" }
 sqldelight-driver-jvm = { module = "app.cash.sqldelight:sqlite-driver", version.ref = "sqldelight" }
 sqldelight-coroutines = { module = "app.cash.sqldelight:coroutines-extensions", version.ref = "sqldelight" }
 
+# Voyager
 voyager = { module = "cafe.adriel.voyager:voyager-navigator", version.ref = "voyager" }
+voyager-screenmodel = { module = "cafe.adriel.voyager:voyager-screenmodel", version.ref = "voyager" }
 voyager-transitions = { module = "cafe.adriel.voyager:voyager-transitions", version.ref = "voyager" }
 
-windowsize = { module = "dev.chrisbanes.material3:material3-window-size-class-multiplatform", version = "0.2.0" }
+windowsize = { module = "dev.chrisbanes.material3:material3-window-size-class-multiplatform", version = "0.3.2" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
-android-library = { id = "com.android.library", version.ref = "agp" }
 
-compose-multiplatform = { id = "org.jetbrains.compose", version.ref = "compose-multiplatform" }
+compose-multiplatform = { id = "org.jetbrains.compose", version.ref = "compose" }
+
+i18n4k = { id = "de.comahe.i18n4k", version.ref = "i18n4k" }
 
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
@@ -55,4 +73,5 @@ compose-multiplatform = [
     "compose-resources",
     "compose-runtime"
 ]
-voyager = ["voyager", "voyager-transitions"]
+i18n4k = ["i18n4k-core", "i18n4k-jvm"]
+voyager = ["voyager", "voyager-screenmodel", "voyager-transitions"]
